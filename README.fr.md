@@ -43,6 +43,13 @@ La sélection de la pile TCP **RACK sur l’émetteur OVH**, en conservant CUBIC
 | `rack` | **1,31 Gbit/s** | 1 368 |
 | Retour à `freebsd` | 4,93 Mbit/s | 530 |
 
+| A1 · Référence `freebsd` | B · Passage à `rack` | A2 · Retour à `freebsd` |
+| :---: | :---: | :---: |
+| ![Test A1 avec freebsd](images/A-test.png) | ![Test B avec rack](images/B-test.png) | ![Test A2 avec freebsd](images/A-test-again.png) |
+| 4,96 Mbit/s | **1,31 Gbit/s** | 4,93 Mbit/s |
+
+*Figure 1 — Débit TCP reçu pour chaque pile testée sur l’émetteur OPNsense, avec CUBIC dans les trois essais.*
+
 La **Cwnd rapportée par iperf3** passait de quelques kilo-octets — souvent **2,70 KiB** — à **8,00 MiB** avec RACK. Le nombre absolu de retransmissions sous RACK doit être rapporté au volume transféré : **4,57 GiB contre environ 18 MiB**, soit plus de 260 fois davantage de données.
 
 Le serveur iperf3 était redémarré entre les changements de pile pour renouveler sa socket d’écoute et les connexions de test.
