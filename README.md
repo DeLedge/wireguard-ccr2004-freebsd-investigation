@@ -1,6 +1,6 @@
 # WireGuard at ~5 Mbit/s on a CCR2004: interaction between packet reordering and the FreeBSD TCP stack
 
-[Français](wireguard-ccr2004-freebsd.fr.md) | **English**
+[Français](README.fr.md) | **English**
 
 Setup: MikroTik **CCR2004-1G-12S+2XS, RouterOS 7.23.8**, connected to a Freebox Ultra, with a WireGuard tunnel to **OPNsense 26.7 hosted at OVH**. A downstream TCP test, with OPNsense as the sender, plateaued at around **5 Mbit/s**.
 
