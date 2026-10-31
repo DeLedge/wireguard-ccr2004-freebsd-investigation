@@ -2,7 +2,7 @@
 
 [Français](README.fr.md) | **English**
 
-Setup: MikroTik **CCR2004-1G-12S+2XS, RouterOS 7.23.8**, connected to a Freebox Ultra, with a WireGuard tunnel to **OPNsense 26.7 hosted at OVH**. A downstream TCP test, with OPNsense as the sender, plateaued at around **5 Mbit/s**.
+Setup: MikroTik **CCR2004-1G-12S+2XS, RouterOS 7.23.8**, connected to an ISP Box (Freebox Ultra, LiveBox etc...), with a WireGuard tunnel to **OPNsense 26.7 hosted at OVH Cloud**. A downstream TCP test, with OPNsense as the sender, plateaued at around **~5 Mbit/s**.
 
 Cross-analysis of captures from inside and outside the VPN, together with the TCP exchanges, revealed two phenomena:
 
