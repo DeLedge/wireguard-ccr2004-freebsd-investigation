@@ -2,6 +2,15 @@
 
 **Français** | [English](README.md)
 
+## Sommaire
+
+- [Réordonnancement des paquets](#1-un-réordonnancement-réel-des-paquets)
+- [Réaction de la pile TCP FreeBSD](#2-une-réaction-pénalisante-de-la-pile-tcp-classique-de-freebsd)
+- [Résultats du test A → B → A](#résultats-du-test-contrôlé-a--b--a)
+- [Portée et limites du correctif](#portée-du-correctif-et-limites)
+- [Références techniques](#références-techniques)
+- [Complément d’enquête et procédure RACK](wireguard-ccr2004-freebsd-addendum.fr(1).md)
+
 Configuration : MikroTik **CCR2004-1G-12S+2XS, RouterOS 7.23.8**, connecté à une Freebox Ultra, tunnel WireGuard vers **OPNsense 26.7 chez OVH**. Un test TCP descendant, émis par OPNsense, plafonnait autour de **5 Mbit/s**.
 
 L’analyse croisée des captures internes/externes du VPN et des échanges TCP a révélé deux phénomènes :

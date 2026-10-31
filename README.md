@@ -2,6 +2,15 @@
 
 [Français](README.fr.md) | **English**
 
+## Contents
+
+- [Packet reordering](#1-actual-packet-reordering)
+- [FreeBSD TCP stack behavior](#2-a-detrimental-response-from-the-classic-freebsd-tcp-stack)
+- [A → B → A test results](#controlled-a--b--a-test-results)
+- [Scope and limitations of the fix](#scope-of-the-fix-and-limitations)
+- [Technical references](#technical-references)
+- [Follow-up tests and RACK configuration](wireguard-ccr2004-freebsd-addendum.en(1).md)
+
 Setup: MikroTik **CCR2004-1G-12S+2XS, RouterOS 7.23.8**, connected to an ISP Box (Freebox Ultra, LiveBox etc...), with a WireGuard tunnel to **OPNsense 26.7 hosted at OVH Cloud**. A downstream TCP test, with OPNsense as the sender, plateaued at around **~5 Mbit/s**.
 
 Cross-analysis of captures from inside and outside the VPN, together with the TCP exchanges, revealed two phenomena:
