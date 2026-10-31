@@ -43,6 +43,15 @@ Selecting the **RACK TCP stack on the OVH sender**, while keeping CUBIC, produce
 | `rack` | **1.31 Gbit/s** | 1,368 |
 | Back to `freebsd` | 4.93 Mbit/s | 530 |
 
+### Performances comparaison : FreeBSD & RACK
+
+| A1 · Baseline `freebsd` | B · Switch to `rack` | A2 · Return to `freebsd` |
+| :---: | :---: | :---: |
+| ![iperf3 baseline test with freebsd](images/A-test.png) | ![iperf3 test with rack](images/B-test.png) | ![iperf3 repeat test with freebsd](images/A-test-again.png) |
+| 4,96 Mbit/s | **1,31 Gbit/s** | 4,93 Mbit/s |
+
+*Figure 1 — TCP throughput measured at the receiver as the OPNsense sender switched from `freebsd` to `rack` and back. All three tests used CUBIC congestion control.*
+
 The **Cwnd reported by iperf3** increased from a few kilobytes — often **2.70 KiB** — to **8.00 MiB** with RACK. The absolute retransmission count under RACK must be considered relative to the volume transferred: **4.57 GiB versus approximately 18 MiB**, or more than 260 times as much data.
 
 The iperf3 server was restarted between stack changes to recreate its listening socket and the test connections.
